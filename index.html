@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--    Заголовок документа-->
+</head>
+
+<body>
+<dl id="bookshelf">
+    <dt>
+        <strong>Beautiful Web Design</strong> by Jason Beaird
+    </dt>
+    <dd>
+        <img src="" alt="View on Amazon"/>
+    </dd>
+</dl>
+
+<script>
+    let books = ["tiger.png", "Rainbow.png",
+        "сердце1920.png",
+        "Барашек.png"
+    ]
+    bookshelf = document.getElementById('bookshelf');
+
+    for (var i = 0, l = books.length; i < l; i++) {
+        var book = books[i];
+
+        var dd = document.createElement('dd');
+        
+        var img = document.createElement('img');
+
+        var link = document.createElement('a');
+
+
+        img.setAttribute('src', book);
+
+        link.appendChild(img);
+
+        dd.appendChild(link);
+        bookshelf.appendChild(dd);
+    }
+</script>
+</body>
+
+</html>
