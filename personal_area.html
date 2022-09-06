@@ -17,16 +17,23 @@
 
 <body>
 <div>
-    <a>Пользователь: Амир</a>
-    <button id = "sign-out" style="
-background-color: #f1ece3;
-
+    <div id = "userName"></div>
+    <button id = "sign-out" onclick="sign_out()" style="
+            background-color: #f1ece3;
             border: 0px;
             height: 25px;
             /*width: max-content;*/
             border-radius: 10px;
             font-family: 'Montserrat', sans-serif;
-">Выйти</button></div>
+">Выйти</button>
+    <button id = "menu" onclick="location.href='main.html'" style="
+            background-color: #f1ece3;
+            border: 0;
+            height: 25px;
+            /*width: max-content;*/
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+">Главная страница</button></div>
 <dl id="bookshelf">
     <dt>
         <div id="imageHistory" style="
@@ -41,38 +48,10 @@ background-color: #f1ece3;
     <dd>
     </dd>
 </dl>
+<script>
+    document.getElementById('userName').textContent  = `Пользователь: ${localStorage.getItem("userName")}`;
+</script>
 
-<!--<script>-->
-<!--    let books = ["tiger.png", "Rainbow.png",-->
-<!--        "сердце1920.png",-->
-<!--        "Барашек.png"-->
-<!--    ]-->
-<!--    bookshelf = document.getElementById('bookshelf');-->
-
-<!--    for (var i = 0, l = books.length; i < l; i++) {-->
-<!--        var book = books[i];-->
-
-<!--        var dd = document.createElement('dd');-->
-
-<!--        var img = document.createElement('img');-->
-<!--        img.style.width = "600px";-->
-<!--        img.style.height = "600px";-->
-<!--        img.style.display = "block";-->
-<!--        img.style.marginRight = "auto";-->
-<!--        img.style.marginLeft = "auto";-->
-<!--        // img.style.-->
-
-<!--        var link = document.createElement('a');-->
-
-
-<!--        img.setAttribute('src', book);-->
-
-<!--        link.appendChild(img);-->
-
-<!--        dd.appendChild(link);-->
-<!--        bookshelf.appendChild(dd);-->
-<!--    }-->
-<!--</script>-->
 </body>
 
 </html>
